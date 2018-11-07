@@ -29,6 +29,7 @@ for arch in $architectures; do
   for hd in $generic; do
     ln -s ../../generic/include/$hd $arch/include/$hd
   done
+  cp -a $kernel_tree_clean/usr/include/arch-$arch/asm $arch/include/asm
 done
 popd
 
